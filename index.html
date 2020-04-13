@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home | Tuan Le</title>
+    <link href="Bootstrap_4.3.1/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Le_Css/Le_Color.css" rel="stylesheet" type="text/css"/>
+    <style>
+      /*"height" and "max-height" sets the height for the images*/
+      .card-pic {
+        width: 200px;
+        height: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!--"nav" creates a navigation bar, "nav-pill" fills the current active link, "nav-fill" centers the links according to the screen size-->
+    <!--"nav-item" and "nav-link" further style the links, and "active" fills in the current page blue-->
+    <header class="container">
+      <div class="fixed-top">
+        <nav class="nav nav-pills nav-fill">
+          <a class="nav-item"></a>
+          <a class="nav-item nav-link active" href="index.html">Home</a>
+          <a class="nav-item nav-link" href="Le_AboutMe.html">About Me</a>
+          <a class="nav-item nav-link" href="Le_Resume.html">Resume</a>
+          <a class="nav-item nav-link" href="Le_Projects.html">Projects</a>
+          <a class="nav-item nav-link" href="Le_ContactMe.html">Contact Me</a>
+          <a class="nav-item"></a>
+        </div>
+      </nav>  
+    </header>
+
+    <!--"jumbotron" makes a big grey box for text-->
+    <div class="jumbotron text-center">
+      <br>
+      <h1>Tuan Le's Engineering Portfolio</h1>
+      <p>About Me...</p>
+      <!--linked to the "About Me" page using "href"-->
+      <a href="Le_AboutMe.html">Continue Reading...</a>
+    </div>
+    <br>
+
+      <!--"container" utilizes the grid system to position elemebts and "card" possitions the elements like a card-->
+      <!--"flex-fill" fills in the image on the right side of the card while "flex-sm-row makes a space for the image to fill-->
+      <!--"card-text", "card-title", and "card-img" possition the elemts accordingly-->
+    <div class="container">
+      <div class="card">
+        <div class="row">
+          <div class="col-sm-6 card flex-sm-row flex-fill">
+            <div class="card-body">  
+              <h5 class="card-text">Resume</h5>
+              <h2 class="card-title">Tuan Le</h2>
+              <p class="card-text">What do I have to offer?</p>
+              <a href="Le_Resume.html">Continue Reading...</a>
+            </div>
+            <div>
+              <img class="card-pic card-img" src="Images/SelfPicture.jpg"/>
+            </div>
+          </div>
+          <!--links to a download page for the game, target="_blank" opens the download in a new tab-->
+          <div class=" col-sm-6 card flex-sm-row flex-fill">
+            <div class="card-body">  
+              <h5 class="card-text">Projects</h5>
+              <h2 class="card-title">Mit App Inventor</h2>
+              <p class="card-text">This was my second coding project, a flappy-bird game with a local high score system, credit to Dustin Sun, my MIT App Inventor project partner, and Saj Dutta, the original creator for the Oh My Spikes game.</p>
+              <a href="Le_Projects.html" target="_blank">Continue Reading...</a>
+            </div>
+            <div class="card-img">
+              <img class="card-pic" src="Images/Mit_App_Inventor_Logo.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 card flex-sm-row flex-fill">
+          <div class="card-body">  
+            <h5 class="card-text">Contact</h5>
+            <h2 class="card-title">Social Media</h2>
+            <p class="card-text">You can find me on Github, Repl.it, LinkedIn, and more!</p>
+            <a href="Le_ContactMe.html">Continue Reading...</a>
+          </div>
+          <div>
+            <img class="card-pic card-img" src="Images/github-logo.png"/>
+          </div>
+        </div>
+        <div class="col-sm-6 card flex-sm-row flex-fill">
+          <div class="card-body">  
+            <h5 class="card-text">Projects</h5>
+            <h2 class="card-title">Scratch</h2>
+            <p class="card-text">This was my first coding project, a simple 2d platformer with smooth controls, credit to Ansh Lalwani, my coding partner, and Semi99999 for the robot sprite.</p>
+            <a href="Le_Projects.html" target="_blank">Continue Reading...</a>
+          </div>
+          <div class="card-img">
+            <img class="card-pic" src="Images/Scratch_Cat.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  </body>
+  
+  <footer>
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <!--The link takes you to gmail to compose an email--> 
+          <a class="col-sm-3" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=tuanle9333@gmail.com&su=SUBJECT&body=BODY&tf=1" target="_blank">
+            <img src="Images/Email.png" alt="Email Icon" style="height:80px; width:80px;"/>
+          </a>
+          <!--target="_blank" opens up the link into a new tab-->
+          <a class="col-sm-3" href="https://www.linkedin.com/in/tuan-le-b1659b196" target="_blank">
+            <img src="Images/LinkedIn.png" style="height:80px; width:80px;"/>
+          </a>
+          <div class="col-sm-6 float-right">
+            <a href="https://www.dublin.k12.ca.us/Domain/132" target="_blank">
+              <img src="Images/DHS2.png" align="right"/>
+             </a>
+          </div>
+         </div>
+      </div>
+    </div>
+  </footer>
+</html>
