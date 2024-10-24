@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import DoubleLeftArrowIcon from "@/components/icons/double-left-arrow"
+import DoubleLeftArrowIcon from "../../public/static/images/icons/jsx/double-left-arrow"
 import { createContext, useContext, useState } from "react";
 
 interface ISidebarContextProps {
@@ -21,7 +21,7 @@ export default function Sidebar({
       duration-[ease-in-out] py-[5px] border-r 
       border-solid text-nowrap`}>
         
-        <div className="p-4 pb-2 flex justify-between px-3">
+        <div className="p-4 pb-0 flex justify-between px-3">
           <Image className={`overflow-hidden transition-all ${
             isOpen? "w-8 h-8" : "w-0 h-0"
             }`} 
