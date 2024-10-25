@@ -1,10 +1,17 @@
 import "./global.css";
-import Sidebar from "@/components/sidebar"
+import { Sidebar } from "@/components/Sidebar/sidebar"
 import { Metadata } from "next";
 import { Inter, Calistoga } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const calistoga = Calistoga({ subsets: ["latin"], variable: "--font-calistoga", weight: ["400"] });
+const inter = Inter({ 
+  subsets: ["latin"], 
+  variable: "--font-sans" 
+});
+const calistoga = Calistoga({ 
+  subsets: ["latin"], 
+  variable: "--font-serif", 
+  weight: ["400"] 
+});
 
 export const metadata: Metadata = {
   title: 'Tuan Le\'s Portfolio',
@@ -19,9 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`
-        ${inter.className}
-        ${calistoga.className}
-        "min-h-screen min-h-[100dvh] bg-[color:var(--base-clr)] grid grid-cols-[auto_1fr]"
+        ${inter.variable}
+        ${calistoga.variable}
+        " min-h-screen text-text-clr bg-base-clr grid grid-cols-[auto_1fr] font-sans antialiased"
       `}>
         <Sidebar />
         <main>

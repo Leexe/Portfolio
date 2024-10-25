@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import DoubleLeftArrowIcon from "../../public/static/images/icons/jsx/double-left-arrow"
+import { ChevronsLeft } from 'lucide-react';
 import { createContext, Fragment, useContext, useState, useEffect } from "react";
 import { NavItems } from '@/config';
 import { useSelectedLayoutSegment } from "next/navigation";
@@ -11,7 +11,7 @@ interface ISidebarContextProps {
 }
 const SidebarContext = createContext({} as ISidebarContextProps);
 
-export default function Sidebar() {
+export const Sidebar = () => {
   const [isOpen, setisOpen] = useState(false);
   const navItems = NavItems();
 
@@ -33,7 +33,7 @@ export default function Sidebar() {
             src="/favicon.ico" width="32" height="32" alt="" />
           <button onClick={() => setisOpen(curr=>!curr)} 
           className="p-2 rounded-lg hover:bg-sky-700/25 transition-colors">
-            <DoubleLeftArrowIcon className={`transition-transform ${
+            <ChevronsLeft className={`transition-transform ${
               isOpen ? "" : "-rotate-180" 
             }`}/>
           </button>
@@ -67,7 +67,7 @@ interface SidebarItemProps {
   alert: boolean,
 }
 
-export function SidebarItem({icon, text, path, alert = false}: SidebarItemProps) {
+const SidebarItem = ({icon, text, path, alert = false}: SidebarItemProps) => {
   const activeRoute = useSelectedLayoutSegment();
   const active = ('/' + activeRoute == (path) || (activeRoute == null && path == '/'));
 

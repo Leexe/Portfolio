@@ -1,30 +1,27 @@
-import HomeIcon from '../public/static/images/icons/jsx/home-icon';
-import MailIcon from "../public/static/images/icons/jsx/mail-icon";
-import PersonIcon from "../public/static/images/icons/jsx/person-icon";
-import TerminalIcon from "../public/static/images/icons/jsx/terminal-icon";
+import { House, Code, User, Mail} from 'lucide-react';
 
 export const NavItems = () => {
   return [
   { 
-    icon: <HomeIcon />, 
+    icon: <House />, 
     text: "Home", 
     href: "/", 
     alert:true
   },
   { 
-    icon: <PersonIcon />, 
+    icon: <User />, 
     text: "About Me", 
     href: "/about-me", 
     alert:false
   },
   { 
-    icon: <TerminalIcon />, 
+    icon: <Code />, 
     text: "Projects", 
     href: "/projects",
     alert:false
   },
   { 
-    icon: <MailIcon />, 
+    icon: <Mail />, 
     text: "Contact Me", 
     href: "/contact-me", 
     alert:false
