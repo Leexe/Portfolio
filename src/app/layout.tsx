@@ -1,13 +1,10 @@
 import "./global.css";
-import Sidebar, { SidebarItem } from "@/components/sidebar"
+import Sidebar from "@/components/sidebar"
 import { Metadata } from "next";
-import { Inter } from "next/font/google";
-import HomeIcon from '../../public/static/images/icons/jsx/home-icon'
-import MailIcon from "../../public/static/images/icons/jsx/mail-icon"
-import PersonIcon from "../../public/static/images/icons/jsx/person-icon"
-import TerminalIcon from "../../public/static/images/icons/jsx/terminal-icon"
+import { Inter, Calistoga } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const calistoga = Calistoga({ subsets: ["latin"], variable: "--font-calistoga", weight: ["400"] });
 
 export const metadata: Metadata = {
   title: 'Tuan Le\'s Portfolio',
@@ -21,13 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Sidebar>
-          <SidebarItem icon={<HomeIcon />} text="Home" active alert/>
-          <SidebarItem icon={<PersonIcon />} text="About Me" alert/>
-          <SidebarItem icon={<TerminalIcon />} text="Projects"/>
-          <SidebarItem icon={<MailIcon />} text="Contact Me"/>
-        </Sidebar>
+      <body className={`
+        ${inter.className}
+        ${calistoga.className}
+        "min-h-screen min-h-[100dvh] bg-[color:var(--base-clr)] grid grid-cols-[auto_1fr]"
+      `}>
+        <Sidebar />
         <main>
           {children}
         </main>

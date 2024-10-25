@@ -1,18 +1,23 @@
 "use client"
 import Image from "next/image"
+import Link from "next/link"
 import DoubleLeftArrowIcon from "../../public/static/images/icons/jsx/double-left-arrow"
-import { createContext, useContext, useState } from "react";
+import { createContext, Fragment, useContext, useState, useEffect } from "react";
+import { NavItems } from '@/config';
+import { useSelectedLayoutSegment } from "next/navigation";
 
 interface ISidebarContextProps {
   isOpen: boolean;
 }
 const SidebarContext = createContext({} as ISidebarContextProps);
-export default function Sidebar({
-  children,
-}:{
-  children: React.ReactNode
-}) {
-  const [isOpen, setisOpen] = useState(true);
+
+export default function Sidebar() {
+  const [isOpen, setisOpen] = useState(false);
+  const navItems = NavItems();
+
+  useEffect(() => {
+    setisOpen(false)
+  }, [])
 
   return (
     <aside className="h-screen">
@@ -26,18 +31,29 @@ export default function Sidebar({
             isOpen? "w-8 h-8" : "w-0 h-0"
             }`} 
             src="/favicon.ico" width="32" height="32" alt="" />
-         
           <button onClick={() => setisOpen(curr=>!curr)} 
           className="p-2 rounded-lg hover:bg-sky-700/25 transition-colors">
             <DoubleLeftArrowIcon className={`transition-transform ${
               isOpen ? "" : "-rotate-180" 
             }`}/>
-
           </button>
         </div>
 
         <SidebarContext.Provider value={{ isOpen }}>
-          <ul className="flex-1 px-3">{ children }</ul>
+          <ul className="flex-1 px-3">
+            {navItems.map((item, index) => {
+              return (
+                <Fragment key={index}>
+                  <SidebarItem
+                    icon={item.icon}
+                    text={item.text}
+                    path={item.href}
+                    alert={item.alert}
+                  />
+                </Fragment>
+              )
+            })}
+          </ul>
         </SidebarContext.Provider>
       </nav>
     </aside>
@@ -47,14 +63,17 @@ export default function Sidebar({
 interface SidebarItemProps {
   icon: React.ReactNode,
   text: string,
-  active?: boolean,
-  alert?: boolean,
+  path: string
+  alert: boolean,
 }
 
-export function SidebarItem({icon, text, active = false, alert = false}: SidebarItemProps) {
+export function SidebarItem({icon, text, path, alert = false}: SidebarItemProps) {
+  const activeRoute = useSelectedLayoutSegment();
+  const active = ('/' + activeRoute == (path) || (activeRoute == null && path == '/'));
+
   const {isOpen} = useContext(SidebarContext);
   return (
-    <li className={`
+    <Link href={path} className={`
       relative flex item-center py-2 px-2 my-5 
       font-medium rounded-md cursor-pointer group
       transition-colors
@@ -99,6 +118,6 @@ export function SidebarItem({icon, text, active = false, alert = false}: Sidebar
           {text}
         </div>)
       }
-    </li>
+    </Link>
   )
 }
