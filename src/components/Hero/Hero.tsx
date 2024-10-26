@@ -3,11 +3,13 @@ import Link from "next/link"
 export const HeroSection = () => {
   return (
      <div className="py-36 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+      <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_80%,transparent)]">
+        <div className="size-[620px] hero-ring" />
+        <div className="size-[820px] hero-ring" />
+        <div className="size-[1020px] hero-ring" />
+        <div className="size-[1220px] hero-ring" />
+      </div>
       <div className="container">
-        <div className="size-[620px] hero-ring"></div>
-        <div className="size-[820px] hero-ring"></div>
-        <div className="size-[1020px] hero-ring"></div>
-        <div className="size-[1220px] hero-ring"></div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl mt-8 tracking-wide text-center">
             Welcome to my Portfolio

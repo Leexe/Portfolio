@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronsLeft } from 'lucide-react';
 import { createContext, Fragment, useContext, useState, useEffect } from "react";
-import { NavItems } from '@/config';
+import { NavItems } from './sidebar-info';
 import { useSelectedLayoutSegment } from "next/navigation";
 
 interface ISidebarContextProps {
@@ -24,7 +24,7 @@ export const Sidebar = () => {
       <nav className={`h-full bg-base-clr 
       border-r-line-clr flex flex-col transition-[400ms] 
       duration-[ease-in-out] py-[5px] border-r 
-      border-solid text-nowrap`}>
+      border-solid text-nowrap sticky z-10`}>
         
         <div className="p-4 pb-0 flex justify-between px-3">
           <Image className={`overflow-hidden transition-all ${
