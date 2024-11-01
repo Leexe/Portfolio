@@ -1,3 +1,11 @@
+import { TitleSection } from "@/components/title"
+import { ProjectSection } from "@/components/Projects/projects"
+
 export default function Projects() {
-    return <h1>Projects</h1>
+    return (
+        <div>
+            <TitleSection titleName="Projects" />
+            <ProjectSection />
+        </div>
+    )
 }
