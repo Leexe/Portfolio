@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ChevronsLeft } from 'lucide-react';
 import { createContext, Fragment, useContext, useState, useEffect } from "react";
-import { NavItems } from './sidebar-info';
+import { navItems } from './sidebar-info';
 import { useSelectedLayoutSegment } from "next/navigation";
 
 interface ISidebarContextProps {
@@ -13,7 +13,6 @@ const SidebarContext = createContext({} as ISidebarContextProps);
 
 export const Sidebar = () => {
   const [isOpen, setisOpen] = useState(false);
-  const navItems = NavItems();
 
   useEffect(() => {
     setisOpen(false)
