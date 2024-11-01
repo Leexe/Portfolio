@@ -5,7 +5,7 @@ export const navItems = [
     icon: <House />, 
     text: "Home", 
     href: "/", 
-    alert:true
+    alert:false
   },
   { 
     icon: <User />, 
