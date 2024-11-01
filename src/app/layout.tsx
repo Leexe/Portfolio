@@ -1,6 +1,7 @@
 import "./global.css";
 import { Sidebar } from "@/components/Sidebar/sidebar"
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react"
 import { Metadata } from "next";
 import { Inter, Calistoga } from "next/font/google";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <main>
           {children}
           <SpeedInsights />
+          <Analytics />
         </main>
       </body>
     </html>
