@@ -1,7 +1,7 @@
 import { projectItems } from "./projects-info"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
+// import Image from "next/image"
 
 export const ProjectSection = () => {
   return (
