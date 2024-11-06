@@ -17,7 +17,7 @@ export const Sidebar = () => {
     setisOpen(false)
   }, [])
   return (
-    <aside className="">
+    <aside className="top-0 left-0 h-full">
       <nav className={`h-full bg-base-clr 
       border-r-line-clr flex flex-col transition-[400ms] 
       duration-[ease-in-out] py-[5px] border-r 
