@@ -20,7 +20,7 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center sm:mx-12 mt-4 gap-4">
-          <Link href="/projects" className="inline-flex items-center border border-white/15 px-6 h-12 srounded-xl gap-2 cursor-pointer hover:bg-amber-100"> 
+          <Link href="/projects" className="inline-flex items-center border border-white/15 px-6 h-12 rounded-xl gap-2 cursor-pointer hover:bg-amber-100"> 
             <span className="font-semibold">View My Projects</span>
             <Briefcase/>
           </Link>
