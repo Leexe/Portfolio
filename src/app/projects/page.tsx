@@ -4,7 +4,7 @@ import { ProjectSection } from "@/components/Projects/projects"
 export default function Projects() {
     return (
         <div>
-            <TitleSection titleName="Projects" />
+            <TitleSection titleName="Projects"/>
             <ProjectSection />
         </div>
     )

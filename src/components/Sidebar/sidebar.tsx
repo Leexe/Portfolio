@@ -13,18 +13,15 @@ const SidebarContext = createContext({} as ISidebarContextProps);
 
 export const Sidebar = () => {
   const [isOpen, setisOpen] = useState(false);
-
   useEffect(() => {
     setisOpen(false)
   }, [])
-
   return (
-    <aside className="h-screen">
+    <aside className="">
       <nav className={`h-full bg-base-clr 
       border-r-line-clr flex flex-col transition-[400ms] 
       duration-[ease-in-out] py-[5px] border-r 
-      border-solid text-nowrap sticky z-10`}>
-        
+      border-solid text-nowrap z-10`}>
         <div className="p-4 pb-0 flex justify-between px-3">
           <Image className={`overflow-hidden transition-all ${
             isOpen? "w-8 h-8" : "w-0 h-0"
@@ -37,7 +34,6 @@ export const Sidebar = () => {
             }`}/>
           </button>
         </div>
-
         <SidebarContext.Provider value={{ isOpen }}>
           <ul className="flex-1 px-3">
             {navItems.map((item, index) => {

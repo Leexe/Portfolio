@@ -30,7 +30,7 @@ export default function RootLayout({
       <body className={`
         ${inter.variable}
         ${calistoga.variable}
-        " min-h-screen text-text-clr bg-base-clr grid grid-cols-[auto_1fr] font-sans antialiased"
+        "min-h-screen text-text-clr bg-base-clr grid grid-cols-[auto_1fr] font-sans antialiased"
       `}>
         <Sidebar />
         <main>
