@@ -27,6 +27,7 @@ const config: Config = {
       colors: {
         'base-clr':'#11121a',
         'line-clr': '#42434a',
+        'card-bg-clr': '#252739',
         'hover-clr': '#222533',
         'text-clr': '#e6e6ef',
         'accent-clr': '#5e63ff',

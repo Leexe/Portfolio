@@ -30,10 +30,11 @@ export default function RootLayout({
       <body className={`
         ${inter.variable}
         ${calistoga.variable}
-        " min-h-screen text-text-clr bg-base-clr grid grid-cols-[auto_1fr] font-sans antialiased"
+        "min-h-screen text-text-clr bg-base-clr flex h-screen font-sans antialiased"
       `}>
         <Sidebar />
-        <main>
+
+        <main className="overflow-y-auto grow h-full">
           {children}
           <SpeedInsights />
           <Analytics />
