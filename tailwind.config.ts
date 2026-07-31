@@ -21,17 +21,17 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: 'var(--font-sans)',
-        serif: 'var(--font-serif)',
+        sans: 'var(--font-mono)', // Force mono
+        serif: 'var(--font-mono)', // Force mono
         mono: 'var(--font-mono)',
       },
       colors: {
-        'obsidian': '#09090b',
-        'obsidian-card': '#18181b',
-        'line-clr': '#27272a',
-        'text-main': '#fafafa',
-        'text-muted': '#a1a1aa',
-        'accent-mint': '#10b981',
+        'obsidian': '#000000',
+        'obsidian-card': '#050505',
+        'line-clr': '#003b00',
+        'text-main': '#00ff41',
+        'text-muted': '#008f11',
+        'accent-mint': '#00ff41',
       },
     },
   },
