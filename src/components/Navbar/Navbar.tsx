@@ -6,42 +6,42 @@ export const Navbar = () => {
   const pathname = usePathname()
 
   const navItems = [
-    { name: "HOME", path: "/" },
-    { name: "PORTFOLIO", path: "/projects" },
-    { name: "ABOUT", path: "/about-me" },
-    { name: "CONTACT", path: "/contact-me" },
+    { name: "Home", path: "/" },
+    { name: "Portfolio", path: "/projects" },
+    { name: "About", path: "/about-me" },
+    { name: "Contact", path: "/contact-me" },
   ]
 
   return (
     <div className="container mt-12 mb-16">
-      <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-line-clr pb-6">
-        <div>
-          <h1 className="text-text-main text-5xl font-black tracking-tighter uppercase inline-block mr-6">
-            TUAN LE<span className="text-accent-mint">.</span>
+      <div className="flex flex-col md:flex-row md:items-center justify-between pb-8">
+        <div className="flex flex-col items-center md:items-start text-center md:text-left shadow-clay-out p-6 rounded-3xl mb-8 md:mb-0">
+          <h1 className="text-clay-accent text-3xl font-black tracking-tight">
+            Tuan Le
           </h1>
-          <span className="text-text-muted font-mono tracking-widest uppercase text-xs align-bottom md:pb-2 inline-block">
-            GAME | GRAPHICS PROGRAMMER
+          <span className="text-clay-text-muted text-sm font-medium mt-1">
+            Game & Graphics Programmer
           </span>
         </div>
         
-        <div className="flex gap-4 mt-6 md:mt-0">
-          <Link href="https://github.com/Leexe" target="_blank" className="text-text-muted hover:text-accent-mint transition-colors text-sm tracking-wider font-mono uppercase">
+        <div className="flex gap-6 items-center justify-center bg-clay-base shadow-clay-out px-8 py-4 rounded-3xl">
+          <Link href="https://github.com/Leexe" target="_blank" className="text-clay-text-muted hover:text-clay-accent transition-colors text-sm font-bold shadow-clay-out hover:shadow-clay-in px-4 py-2 rounded-xl">
             GitHub
           </Link>
-          <Link href="#" className="text-text-muted hover:text-accent-mint transition-colors text-sm tracking-wider font-mono uppercase">
+          <Link href="#" className="text-clay-text-muted hover:text-clay-accent transition-colors text-sm font-bold shadow-clay-out hover:shadow-clay-in px-4 py-2 rounded-xl">
             LinkedIn
           </Link>
         </div>
       </div>
 
-      <nav className="flex gap-8 mt-6">
+      <nav className="flex flex-wrap gap-4 justify-center md:justify-start">
         {navItems.map((item) => {
           const isActive = pathname === item.path
           return (
             <Link 
               key={item.name} 
               href={item.path} 
-              className={`text-sm tracking-widest font-bold uppercase transition-all !no-underline ${isActive ? 'text-accent-mint' : 'text-text-muted hover:text-text-main'}`}
+              className={`text-sm font-bold transition-all px-6 py-3 rounded-2xl !no-underline ${isActive ? 'shadow-clay-in text-clay-accent' : 'shadow-clay-out text-clay-text-muted hover:text-clay-accent'}`}
             >
               {item.name}
             </Link>

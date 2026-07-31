@@ -26,12 +26,15 @@ const config: Config = {
         mono: 'var(--font-mono)',
       },
       colors: {
-        'obsidian': '#09090b',
-        'obsidian-card': '#18181b',
-        'line-clr': '#27272a',
-        'text-main': '#fafafa',
-        'text-muted': '#a1a1aa',
-        'accent-mint': '#10b981',
+        'clay-base': '#E0E5EC',
+        'clay-card': '#E0E5EC',
+        'clay-text-main': '#4A5568',
+        'clay-text-muted': '#A0AEC0',
+        'clay-accent': '#9F7AEA', // Soft Lavender
+      },
+      boxShadow: {
+        'clay-out': '9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5)',
+        'clay-in': 'inset 6px 6px 10px 0 rgba(163,177,198, 0.6), inset -6px -6px 10px 0 rgba(255,255,255, 0.5)',
       },
     },
   },

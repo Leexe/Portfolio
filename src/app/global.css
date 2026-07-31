@@ -4,12 +4,11 @@
 
 @layer base {
     body {
-        @apply bg-obsidian text-text-main;
-        font-family: Arial, Helvetica, sans-serif;
+        @apply bg-clay-base text-clay-text-main font-sans;
     }
     
     a {
-        @apply text-accent-mint hover:underline;
+        @apply text-clay-accent font-bold transition-all;
     }
 }
 
