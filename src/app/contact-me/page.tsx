@@ -1,5 +1,9 @@
+import { ContactSection } from "@/components/Contact/ContactSection"
+
 export default function ContactMe() {
   return (
-    <h1>Contact Me</h1>
+    <div className="min-h-screen">
+      <ContactSection />
+    </div>
   )
 }

@@ -1,28 +1,34 @@
-import { House, Code, User, Mail} from 'lucide-react';
+import { Home, FolderGit2, User, Send, Github } from "lucide-react";
 
 export const navItems = [
-  { 
-    icon: <House />, 
-    text: "Home", 
-    href: "/", 
-    alert:false
+  {
+    icon: <Home size={20} />,
+    text: "Home",
+    href: "/",
+    alert: false,
   },
-  { 
-    icon: <User />, 
-    text: "About Me", 
-    href: "/about-me", 
-    alert:false
-  },
-  { 
-    icon: <Code />, 
-    text: "Projects", 
+  {
+    icon: <FolderGit2 size={20} />,
+    text: "Projects",
     href: "/projects",
-    alert:false
+    alert: true,
   },
-  { 
-    icon: <Mail />, 
-    text: "Contact Me", 
-    href: "/contact-me", 
-    alert:false
+  {
+    icon: <User size={20} />,
+    text: "About Me",
+    href: "/about-me",
+    alert: false,
+  },
+  {
+    icon: <Send size={20} />,
+    text: "Contact",
+    href: "/contact-me",
+    alert: false,
+  },
+  {
+    icon: <Github size={20} />,
+    text: "GitHub",
+    href: "https://github.com/Leexe",
+    alert: false,
   },
 ];
