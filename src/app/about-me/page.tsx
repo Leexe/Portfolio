@@ -1,3 +1,9 @@
+import { AboutSection } from "@/components/About/AboutSection"
+
 export default function AboutMe() {
-  return <h1>About Me</h1>
+  return (
+    <div className="min-h-screen">
+      <AboutSection />
+    </div>
+  )
 }
