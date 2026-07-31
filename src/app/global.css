@@ -4,39 +4,17 @@
 
 @layer base {
     body {
-        @apply bg-base-clr text-text-clr;
-    }
-    .hero-ring {
-        @apply z-0 inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_80px_inset] shadow-accent-clr/5 absolute border-2 border-accent-clr/10 rounded-full;
+        @apply bg-obsidian text-text-main;
+        font-family: Arial, Helvetica, sans-serif;
     }
     
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: #1e2238;
-        border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-        background: #42434a;
+    a {
+        @apply text-accent-mint hover:underline;
     }
 }
 
 @layer utilities {
     .container {
-        @apply lg:max-w-5xl;
-    }
-    .glass-card {
-        @apply bg-card-bg-clr/60 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden relative transition-all duration-300 hover:border-accent-clr/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)];
-    }
-    .glass-button {
-        @apply bg-white/5 border border-white/10 backdrop-blur-sm rounded-xl py-2 px-4 font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center gap-2;
-    }
-    .primary-button {
-        @apply bg-gradient-to-r from-accent-clr to-cyan-glow text-white rounded-xl py-2 px-6 font-semibold hover:opacity-90 transition-opacity inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(99,102,241,0.3)];
+        @apply max-w-[900px] mx-auto px-6;
     }
 }

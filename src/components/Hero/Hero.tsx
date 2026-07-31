@@ -1,41 +1,31 @@
-import Link from "next/link"
-import { ArrowRight, Terminal } from "lucide-react"
+
 
 export const HeroSection = () => {
   return (
-    <div className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden flex flex-col items-center justify-center min-h-[80vh]">
-      {/* Background Rings & Glows */}
-      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
-        <div className="hero-ring size-[600px] border-accent-clr/20 shadow-accent-clr/10" />
-        <div className="hero-ring size-[850px] border-cyan-glow/10 shadow-cyan-glow/5" />
-        <div className="hero-ring size-[1100px] border-emerald-glow/5 shadow-emerald-glow/5" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-accent-clr/20 blur-[120px] rounded-full opacity-50" />
+    <div className="py-16 text-text-main">
+      <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8 leading-tight">
+        ENGINEERING <br/>
+        <span className="text-accent-mint">VIRTUAL</span> WORLDS.
+      </h2>
+      <div className="max-w-2xl">
+        <p className="text-lg md:text-xl text-text-muted leading-relaxed mb-6">
+          I&apos;m Tuan Le, a computer graphics and game programming enthusiast at UCSB. I specialize in building robust systems, interactive audio, and high-performance game architectures.
+        </p>
+        <p className="text-lg md:text-xl text-text-muted leading-relaxed mb-12">
+          Currently tinkering with engines and figuring out new ways to push creative boundaries.
+        </p>
       </div>
-
-      <div className="container relative z-10">
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm text-secondary-text-clr mb-8 backdrop-blur-md">
-            <Terminal size={14} className="text-emerald-glow" />
-            <span>Computer Science @ UCSB</span>
+      
+      {/* Featured Video / Tech Reel Placeholder */}
+      <div className="w-full bg-obsidian-card border border-line-clr aspect-video flex items-center justify-center text-white mb-16 relative group cursor-pointer overflow-hidden">
+        {/* Placeholder for YouTube Embed */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center opacity-30 group-hover:scale-105 transition-transform duration-700"></div>
+        <div className="absolute inset-0 bg-obsidian/40 group-hover:bg-transparent transition-colors duration-500"></div>
+        <div className="z-10 flex flex-col items-center">
+          <div className="w-20 h-20 rounded-full border-2 border-accent-mint flex items-center justify-center mb-6 group-hover:bg-accent-mint group-hover:text-obsidian transition-colors duration-300">
+            <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[14px] border-l-current border-b-[8px] border-b-transparent ml-2"></div>
           </div>
-          
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl tracking-tight mb-8">
-            Building <span className="bg-gradient-to-r from-accent-clr to-cyan-glow text-transparent bg-clip-text">Immersive</span> Worlds & Systems
-          </h1>
-          
-          <p className="text-lg md:text-xl text-secondary-text-clr mb-12 max-w-2xl mx-auto leading-relaxed">
-            I&apos;m Tuan Le, a software engineer and game developer specializing in Unity, interactive audio, and robust system architecture.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/projects" className="primary-button w-full sm:w-auto">
-              <span>View Projects</span>
-              <ArrowRight size={18} />
-            </Link>
-            <Link href="/about-me" className="glass-button w-full sm:w-auto">
-              <span>More About Me</span>
-            </Link>
-          </div>
+          <h3 className="text-xl font-bold tracking-widest uppercase">Tech Reel 2026</h3>
         </div>
       </div>
     </div>

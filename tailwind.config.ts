@@ -23,21 +23,16 @@ const config: Config = {
       fontFamily: {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',
+        mono: 'var(--font-mono)',
       },
       colors: {
-        'base-clr':'#0a0b10',
-        'line-clr': '#1e2238',
-        'card-bg-clr': '#121526',
-        'hover-clr': '#1a1d36',
-        'text-clr': '#e6e6ef',
-        'accent-clr': '#6366f1', // Indigo
-        'cyan-glow': '#06b6d4',
-        'emerald-glow': '#10b981',
-        'secondary-text-clr': '#b0b3c1',
+        'obsidian': '#09090b',
+        'obsidian-card': '#18181b',
+        'line-clr': '#27272a',
+        'text-main': '#fafafa',
+        'text-muted': '#a1a1aa',
+        'accent-mint': '#10b981',
       },
-      animation: {
-        'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
-      }
     },
   },
   plugins: [],
