@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -23,5 +23,5 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@9.12.1"
+  "packageManager": "pnpm@12.3.4"
 }
