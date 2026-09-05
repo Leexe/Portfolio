@@ -1,11 +1,11 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 flex flex-col items-center justify-center p-8">
+    <main className="min-h-screen bg-neutral-950 flex flex-col items-center justify-center p-8">
       <div className="max-w-2xl text-center space-y-6">
         <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 rounded-full">
           My Portfolio
         </span>
-        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight bg-gradient-to-r from-neutral-100 via-neutral-300 to-neutral-400 bg-clip-text text-transparent">
+        <h1 className="text-4xl sm:text-6xl font-bold tracking-tight bg-linear-to-r from-neutral-100 via-neutral-300 to-neutral-400 bg-clip-text text-transparent">
           Tuan's Portfolio
         </h1>
         <p className="text-neutral-400 text-lg sm:text-xl">
