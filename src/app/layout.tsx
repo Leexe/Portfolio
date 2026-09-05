@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Game Developer",
-  description: "Game Developer & Programmer Portfolio showcasing games, mechanics, and interactive projects.",
+  title: "Doger Dev",
+  description: "My game projects",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
